@@ -92,9 +92,7 @@ module Seer
 
       %{
         <script type="text/javascript">
-          google.load('visualization', '1', {'packages':['columnchart']});
-          google.setOnLoadCallback(drawChart);
-          function drawChart() {
+          $j(document).bind("slide_load", function(){
             var data = new google.visualization.DataTable();
 #{data_columns}
 #{data_table.to_s}
